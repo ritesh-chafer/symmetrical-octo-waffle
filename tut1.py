@@ -1,1 +1,17 @@
-import flask
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+@app.route('/chafer')
+def chafer():
+    return 'Hello, chafer!'
+
+@app.route('/ritesh')
+def ritesh():
+    return 'Hello, ritesh!'
+
+app.run(debug=True)
